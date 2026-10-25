@@ -17,6 +17,7 @@
     <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-mark">O7</span><span>FIELD MANUAL</span></a>
     <nav aria-label="Navegación principal">
       <a href="#mapa">Mapa</a>
+      <a href="#funciones">Funciones</a>
       <a href="#hardware">Hardware</a>
       <a href="#limite">El límite</a>
     </nav>
@@ -31,7 +32,7 @@
         <p class="lede">NetHunter convierte hardware cotidiano en una plataforma portátil de investigación. La herramienta es neutral; el permiso, el objetivo y el impacto determinan de qué lado estás.</p>
         <div class="hero-actions">
           <a class="button primary" href="#mapa">Explorar capacidades <span>↓</span></a>
-          <button class="button ghost" id="motionToggle" type="button" aria-pressed="false">Pausar movimiento</button>
+          <a class="button ghost" href="assets/on7-nethunter-hero.png" download="on7-nethunter-reference.png">Descargar imagen para 3D</a>
         </div>
         <dl class="quick-specs">
           <div><dt>CORE</dt><dd>Kali chroot</dd></div>
@@ -49,7 +50,6 @@
         <span class="device-tag tag-c">CUSTOM <b>KERNEL</b></span>
       </div>
 
-      <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL TO ROTATE</div>
     </section>
 
     <section class="manifesto" aria-label="Principio central">
@@ -103,13 +103,47 @@
       </div>
     </section>
 
+    <section class="domains" id="funciones">
+      <div class="section-heading">
+        <div><p class="section-index">02 / FUNCIONES</p><h2>Cuatro áreas de práctica</h2></div>
+        <p>Capacidades reales del equipo, explicadas desde la evaluación responsable. El mismo hardware puede servir para descubrir fallas o para causar daño: el alcance autorizado define la diferencia.</p>
+      </div>
+      <div class="domain-grid">
+        <article class="domain-card">
+          <div class="domain-head"><span>AUTO / 01</span><b>LAB CERRADO</b></div>
+          <h3>Car hacking</h3>
+          <p>Investigación de seguridad automotriz sobre bancos de prueba, ECUs propias o vehículos expresamente autorizados. Permite estudiar superficies como Bluetooth, Wi-Fi, infotainment y buses internos sin poner personas ni tránsito en riesgo.</p>
+          <dl><div><dt>OBSERVAR</dt><dd>Telemetría y exposición inalámbrica</dd></div><div><dt>VALIDAR</dt><dd>Segmentación y controles de acceso</dd></div><div><dt>LÍMITE</dt><dd>Nunca intervenir un vehículo en circulación</dd></div></dl>
+          <p class="domain-note">El término correcto aquí es seguridad automotriz; “carjacking” suele referirse al robo violento de un vehículo y no a una disciplina de pentesting.</p>
+        </article>
+        <article class="domain-card">
+          <div class="domain-head"><span>NET / 02</span><b>AUTORIZADO</b></div>
+          <h3>Auditoría de redes</h3>
+          <p>Inventario, observación y evaluación de una infraestructura propia o contratada. El objetivo es encontrar configuraciones débiles, activos inesperados y señales de exposición antes de que lo haga un tercero.</p>
+          <dl><div><dt>MAPEAR</dt><dd>Equipos y servicios permitidos</dd></div><div><dt>MEDIR</dt><dd>Cobertura, cifrado y segmentación</dd></div><div><dt>ENTREGAR</dt><dd>Evidencia, impacto y remediación</dd></div></dl>
+        </article>
+        <article class="domain-card">
+          <div class="domain-head"><span>TEST / 03</span><b>CONTRATO</b></div>
+          <h3>Pentesting</h3>
+          <p>Una simulación acotada de ataque para comprobar si una debilidad puede producir un impacto real. Requiere reglas de compromiso, ventanas horarias, exclusiones, contactos de emergencia y un informe final.</p>
+          <dl><div><dt>PREPARAR</dt><dd>Alcance y autorización escrita</dd></div><div><dt>PROBAR</dt><dd>Hipótesis con mínimo impacto</dd></div><div><dt>CERRAR</dt><dd>Limpiar, documentar y corregir</dd></div></dl>
+        </article>
+        <article class="domain-card">
+          <div class="domain-head"><span>BT / 04</span><b>DISPOSITIVO PROPIO</b></div>
+          <h3>Bluetooth security</h3>
+          <p>Evaluación de emparejamiento, perfiles, servicios y resiliencia sobre accesorios controlados. Los exploits Bluetooth aprovechan fallas concretas de implementación; se estudian en laboratorio para confirmar versiones afectadas y aplicar mitigaciones.</p>
+          <dl><div><dt>DESCUBRIR</dt><dd>Perfiles y servicios anunciados</dd></div><div><dt>COMPROBAR</dt><dd>Versiones, parches y aislamiento</dd></div><div><dt>DEFENDER</dt><dd>Actualizar, desvincular y reducir exposición</dd></div></dl>
+        </article>
+      </div>
+    </section>
+
     <section class="hardware" id="hardware">
       <div class="hardware-visual">
         <div class="core-ring"><span>ON7</span><small>FIELD NODE</small></div>
         <span class="node n1">MONITOR MODE</span><span class="node n2">BT 5.1</span><span class="node n3">HID</span><span class="node n4">USB HOST</span>
       </div>
       <div class="hardware-copy">
-        <p class="section-index">02 / LA MÁQUINA</p>
+        <p class="section-index">03 / LA MÁQUINA</p>
         <h2>Viejo teléfono.<br>Nuevo propósito.</h2>
         <p>El proyecto extendió un kernel Android 3.18 para convertir al On7 en un nodo portátil de laboratorio. No es magia: es compatibilidad, drivers, energía estable y muchas capas trabajando juntas.</p>
         <div class="spec-grid">
@@ -122,7 +156,7 @@
     </section>
 
     <section class="decision" id="limite">
-      <p class="section-index">03 / ANTES DE TOCAR LA RED</p>
+      <p class="section-index">04 / ANTES DE TOCAR LA RED</p>
       <h2>La prueba de los cuatro “sí”.</h2>
       <div class="decision-grid">
         <article><span>01</span><h3>¿Es mío?</h3><p>El equipo, la cuenta y la red están bajo tu control.</p></article>
@@ -140,6 +174,5 @@
     <a href="#inicio">VOLVER ARRIBA ↑</a>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
