@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070808">
+  <meta name="description" content="Mapa interactivo y responsable de las capacidades de un Samsung Galaxy On7 modificado con Kali NetHunter.">
+  <title>ON7 // NetHunter Field Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-mark">O7</span><span>FIELD MANUAL</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#mapa">Mapa</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#limite">El límite</a>
+    </nav>
+    <span class="status"><i></i> LAB ONLY</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">SAMSUNG GALAXY ON7 · KERNEL 3.18 MODIFICADO</p>
+        <h1>Un teléfono.<br><em>Dos caminos.</em></h1>
+        <p class="lede">NetHunter convierte hardware cotidiano en una plataforma portátil de investigación. La herramienta es neutral; el permiso, el objetivo y el impacto determinan de qué lado estás.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#mapa">Explorar capacidades <span>↓</span></a>
+          <button class="button ghost" id="motionToggle" type="button" aria-pressed="false">Pausar movimiento</button>
+        </div>
+        <dl class="quick-specs">
+          <div><dt>CORE</dt><dd>Kali chroot</dd></div>
+          <div><dt>RADIO</dt><dd>Wi-Fi + BT 5.1</dd></div>
+          <div><dt>ACCESS</dt><dd>USB OTG</dd></div>
+        </dl>
+      </div>
+
+      <div class="device-stage" aria-label="Samsung Galaxy On7 modificado con NetHunter">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <img id="device" src="assets/on7-nethunter-hero.png" alt="Galaxy On7 modificado, con pantalla de NetHunter, antena y adaptadores USB">
+        <span class="device-tag tag-a">RTL8761BU <b>BT 5.1</b></span>
+        <span class="device-tag tag-b">USB OTG <b>HOST</b></span>
+        <span class="device-tag tag-c">CUSTOM <b>KERNEL</b></span>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL TO ROTATE</div>
+    </section>
+
+    <section class="manifesto" aria-label="Principio central">
+      <p class="section-index">00 / REGLA MADRE</p>
+      <blockquote>“Puedo hacerlo” no significa “tengo permiso para hacerlo”.</blockquote>
+      <p>Trabajá únicamente sobre equipos propios, laboratorios aislados o sistemas con autorización expresa y alcance documentado.</p>
+    </section>
+
+    <section class="capabilities" id="mapa">
+      <div class="section-heading">
+        <div><p class="section-index">01 / ESPECTRO</p><h2>De herramienta a amenaza</h2></div>
+        <p>Cada nivel suma capacidad y responsabilidad. La escala no mide “qué tan hacker” es una técnica: mide cuánto consentimiento, control y riesgo involucra.</p>
+      </div>
+
+      <div class="spectrum" role="list">
+        <article class="capability safe" role="listitem">
+          <div class="level"><span>01</span><b>VERDE</b></div>
+          <div class="cap-body"><p class="kicker">APRENDER</p><h3>Laboratorio y diagnóstico</h3><p>Explorar Linux, redes, radiofrecuencia y drivers sobre tu propio entorno. Capturar tu tráfico de prueba, estudiar protocolos y documentar resultados reproducibles.</p><ul><li>Inventario de hardware</li><li>Análisis de paquetes propios</li><li>Automatización y scripting</li></ul></div>
+          <span class="verdict">ÉTICO</span>
+        </article>
+
+        <article class="capability safe" role="listitem">
+          <div class="level"><span>02</span><b>VERDE</b></div>
+          <div class="cap-body"><p class="kicker">DEFENDER</p><h3>Auditoría con permiso</h3><p>Evaluar una red o un dispositivo con autorización previa, objetivos definidos y un plan de recuperación. El resultado correcto es un informe, no una sorpresa.</p><ul><li>Descubrimiento controlado</li><li>Validación de configuraciones</li><li>Detección de puntos de acceso falsos</li></ul></div>
+          <span class="verdict">PROFESIONAL</span>
+        </article>
+
+        <article class="capability caution" role="listitem">
+          <div class="level"><span>03</span><b>ÁMBAR</b></div>
+          <div class="cap-body"><p class="kicker">SIMULAR</p><h3>Wi-Fi y portales cautivos</h3><p>Un AP de laboratorio permite estudiar autenticación, aislamiento y señales de engaño. Debe usar un SSID propio, participantes informados y datos ficticios.</p><ul><li>AP aislado de práctica</li><li>Portal educativo sin credenciales reales</li><li>Pruebas de resiliencia pactadas</li></ul></div>
+          <span class="verdict">SOLO LAB</span>
+        </article>
+
+        <article class="capability caution" role="listitem">
+          <div class="level"><span>04</span><b>ÁMBAR</b></div>
+          <div class="cap-body"><p class="kicker">RADIO</p><h3>Bluetooth bajo control</h3><p>El BT500 habilita descubrimiento y validación sobre accesorios propios. Incluso un test breve puede cortar audio o bloquear un enlace: aislá el ensayo y avisá a todos.</p><ul><li>Enumeración de servicios propios</li><li>Emparejamiento y A2DP</li><li>Medición de alcance y defensa</li></ul></div>
+          <span class="verdict">RIESGO REAL</span>
+        </article>
+
+        <article class="capability danger" role="listitem">
+          <div class="level"><span>05</span><b>ROJO</b></div>
+          <div class="cap-body"><p class="kicker">CRUZAR LA LÍNEA</p><h3>Interferencia y acceso sin permiso</h3><p>Interrumpir conexiones ajenas, tomar control de dispositivos, evadir autenticación o degradar un servicio ya no es una demostración: afecta disponibilidad y privacidad.</p><ul><li>DoS contra terceros</li><li>Takeover de sesiones</li><li>Acceso no autorizado</li></ul></div>
+          <span class="verdict">NO AUTORIZADO</span>
+        </article>
+
+        <article class="capability forbidden" role="listitem">
+          <div class="level"><span>06</span><b>NEGRO</b></div>
+          <div class="cap-body"><p class="kicker">DAÑO DELIBERADO</p><h3>Engaño, robo y persistencia</h3><p>Suplantar marcas, capturar credenciales, instalar persistencia o usar datos de víctimas causa daño directo. Esta página reconoce el riesgo para ayudarte a detectarlo, no para ejecutarlo.</p><ul><li>Phishing y robo de identidad</li><li>Exfiltración de información</li><li>Vigilancia sin consentimiento</li></ul></div>
+          <span class="verdict">INMORAL · ILEGAL</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="hardware" id="hardware">
+      <div class="hardware-visual">
+        <div class="core-ring"><span>ON7</span><small>FIELD NODE</small></div>
+        <span class="node n1">MONITOR MODE</span><span class="node n2">BT 5.1</span><span class="node n3">HID</span><span class="node n4">USB HOST</span>
+      </div>
+      <div class="hardware-copy">
+        <p class="section-index">02 / LA MÁQUINA</p>
+        <h2>Viejo teléfono.<br>Nuevo propósito.</h2>
+        <p>El proyecto extendió un kernel Android 3.18 para convertir al On7 en un nodo portátil de laboratorio. No es magia: es compatibilidad, drivers, energía estable y muchas capas trabajando juntas.</p>
+        <div class="spec-grid">
+          <div><span>01</span><h3>Kernel custom</h3><p>Soporte USB, HID y radios externas.</p></div>
+          <div><span>02</span><h3>RTL8761BU</h3><p>Bluetooth 5.1 mediante backport del driver.</p></div>
+          <div><span>03</span><h3>Kali userspace</h3><p>Herramientas de análisis dentro del chroot.</p></div>
+          <div><span>04</span><h3>OTG alimentado</h3><p>Periféricos estables sin exigir al teléfono.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision" id="limite">
+      <p class="section-index">03 / ANTES DE TOCAR LA RED</p>
+      <h2>La prueba de los cuatro “sí”.</h2>
+      <div class="decision-grid">
+        <article><span>01</span><h3>¿Es mío?</h3><p>El equipo, la cuenta y la red están bajo tu control.</p></article>
+        <article><span>02</span><h3>¿Hay permiso?</h3><p>La autorización es explícita, vigente y demostrable.</p></article>
+        <article><span>03</span><h3>¿Hay alcance?</h3><p>Sabés exactamente qué, cuándo y hasta dónde probar.</p></article>
+        <article><span>04</span><h3>¿Es reversible?</h3><p>Podés detener la prueba y restaurar el servicio sin daño.</p></article>
+      </div>
+      <div class="final-rule"><span>SI ALGUNA RESPUESTA ES “NO”</span><strong>No ejecutes la prueba.</strong></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ON7 // NETHUNTER FIELD MANUAL</p>
+    <p>Contenido educativo · Sin procedimientos ofensivos operativos</p>
+    <a href="#inicio">VOLVER ARRIBA ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
