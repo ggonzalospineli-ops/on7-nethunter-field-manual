@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070808">
+  <meta name="description" content="Mapa interactivo y responsable de las capacidades de un Samsung Galaxy On7 modificado con Kali NetHunter.">
+  <title>ON7 // NetHunter Field Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-mark">O7</span><span>FIELD MANUAL</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#mapa">Mapa</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#limite">El límite</a>
+    </nav>
+    <span class="status"><i></i> LAB ONLY</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">SAMSUNG GALAXY ON7 · KERNEL 3.18 MODIFICADO</p>
+        <h1>Un teléfono.<br><em>Dos caminos.</em></h1>
+        <p class="lede">NetHunter convierte hardware cotidiano en una plataforma portátil de investigación. La herramienta es neutral; el permiso, el objetivo y el impacto determinan de qué lado estás.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#mapa">Explorar capacidades <span>↓</span></a>
+          <a class="button ghost" href="assets/on7-nethunter-hero.png" download="on7-nethunter-reference.png">Descargar imagen para 3D</a>
+        </div>
+        <dl class="quick-specs">
+          <div><dt>CORE</dt><dd>Kali chroot</dd></div>
+          <div><dt>RADIO</dt><dd>Wi-Fi + BT 5.1</dd></div>
+          <div><dt>ACCESS</dt><dd>USB OTG</dd></div>
+        </dl>
+      </div>
+
+      <div class="device-stage" aria-label="Samsung Galaxy On7 modificado con NetHunter">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <img id="device" src="assets/on7-nethunter-hero.png" alt="Galaxy On7 modificado, con pantalla de NetHunter, antena y adaptadores USB">
+        <span class="device-tag tag-a">RTL8761BU <b>BT 5.1</b></span>
+        <span class="device-tag tag-b">USB OTG <b>HOST</b></span>
+        <span class="device-tag tag-c">CUSTOM <b>KERNEL</b></span>
+      </div>
+
+    </section>
+
+    <section class="manifesto" aria-label="Principio central">
+      <p class="section-index">00 / REGLA MADRE</p>
+      <blockquote>“Puedo hacerlo” no significa “tengo permiso para hacerlo”.</blockquote>
+      <p>Trabajá únicamente sobre equipos propios, laboratorios aislados o sistemas con autorización expresa y alcance documentado.</p>
+    </section>
+
+    <section class="capabilities" id="mapa">
+      <div class="section-heading">
+        <div><p class="section-index">01 / ESPECTRO</p><h2>De herramienta a amenaza</h2></div>
+        <p>Cada nivel suma capacidad y responsabilidad. La escala no mide “qué tan hacker” es una técnica: mide cuánto consentimiento, control y riesgo involucra.</p>
+      </div>
+
+      <div class="spectrum" role="list">
+        <article class="capability safe" role="listitem">
+          <div class="level"><span>01</span><b>VERDE</b></div>
+          <div class="cap-body"><p class="kicker">APRENDER</p><h3>Laboratorio y diagnóstico</h3><p>Explorar Linux, redes, radiofrecuencia y drivers sobre tu propio entorno. Capturar tu tráfico de prueba, estudiar protocolos y documentar resultados reproducibles.</p><ul><li>Inventario de hardware</li><li>Análisis de paquetes propios</li><li>Automatización y scripting</li></ul></div>
+          <span class="verdict">ÉTICO</span>
+        </article>
+
+        <article class="capability safe" role="listitem">
+          <div class="level"><span>02</span><b>VERDE</b></div>
+          <div class="cap-body"><p class="kicker">DEFENDER</p><h3>Auditoría con permiso</h3><p>Evaluar una red o un dispositivo con autorización previa, objetivos definidos y un plan de recuperación. El resultado correcto es un informe, no una sorpresa.</p><ul><li>Descubrimiento controlado</li><li>Validación de configuraciones</li><li>Detección de puntos de acceso falsos</li></ul></div>
+          <span class="verdict">PROFESIONAL</span>
+        </article>
+
+        <article class="capability caution" role="listitem">
+          <div class="level"><span>03</span><b>ÁMBAR</b></div>
+          <div class="cap-body"><p class="kicker">SIMULAR</p><h3>Wi-Fi y portales cautivos</h3><p>Un AP de laboratorio permite estudiar autenticación, aislamiento y señales de engaño. Debe usar un SSID propio, participantes informados y datos ficticios.</p><ul><li>AP aislado de práctica</li><li>Portal educativo sin credenciales reales</li><li>Pruebas de resiliencia pactadas</li></ul></div>
+          <span class="verdict">SOLO LAB</span>
+        </article>
+
+        <article class="capability caution" role="listitem">
+          <div class="level"><span>04</span><b>ÁMBAR</b></div>
+          <div class="cap-body"><p class="kicker">RADIO</p><h3>Bluetooth bajo control</h3><p>El BT500 habilita descubrimiento y validación sobre accesorios propios. Incluso un test breve puede cortar audio o bloquear un enlace: aislá el ensayo y avisá a todos.</p><ul><li>Enumeración de servicios propios</li><li>Emparejamiento y A2DP</li><li>Medición de alcance y defensa</li></ul></div>
+          <span class="verdict">RIESGO REAL</span>
+        </article>
+
+        <article class="capability danger" role="listitem">
+          <div class="level"><span>05</span><b>ROJO</b></div>
+          <div class="cap-body"><p class="kicker">CRUZAR LA LÍNEA</p><h3>Interferencia y acceso sin permiso</h3><p>Interrumpir conexiones ajenas, tomar control de dispositivos, evadir autenticación o degradar un servicio ya no es una demostración: afecta disponibilidad y privacidad.</p><ul><li>DoS contra terceros</li><li>Takeover de sesiones</li><li>Acceso no autorizado</li></ul></div>
+          <span class="verdict">NO AUTORIZADO</span>
+        </article>
+
+        <article class="capability forbidden" role="listitem">
+          <div class="level"><span>06</span><b>NEGRO</b></div>
+          <div class="cap-body"><p class="kicker">DAÑO DELIBERADO</p><h3>Engaño, robo y persistencia</h3><p>Suplantar marcas, capturar credenciales, instalar persistencia o usar datos de víctimas causa daño directo. Esta página reconoce el riesgo para ayudarte a detectarlo, no para ejecutarlo.</p><ul><li>Phishing y robo de identidad</li><li>Exfiltración de información</li><li>Vigilancia sin consentimiento</li></ul></div>
+          <span class="verdict">INMORAL · ILEGAL</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="domains" id="funciones">
+      <div class="section-heading">
+        <div><p class="section-index">02 / FUNCIONES</p><h2>Cuatro áreas de práctica</h2></div>
+        <p>Capacidades reales del equipo, explicadas desde la evaluación responsable. El mismo hardware puede servir para descubrir fallas o para causar daño: el alcance autorizado define la diferencia.</p>
+      </div>
+      <div class="domain-grid">
+        <article class="domain-card car-live-card">
+          <div class="domain-head"><span>AUTO / 01</span><b>LAB CERRADO</b></div>
+          <h3>Car hacking</h3>
+          <p>Investigación de seguridad automotriz sobre bancos de prueba, ECUs propias o vehículos expresamente autorizados. Permite estudiar superficies como Bluetooth, Wi-Fi, infotainment y buses internos sin poner personas ni tránsito en riesgo.</p>
+          <div class="scene-panel car-scene" aria-label="Simulación visual de un teléfono validando el desbloqueo de un automóvil de laboratorio">
+            <div class="phone-prop" aria-hidden="true"><span class="phone-speaker"></span><div class="phone-screen"><span class="lock-icon"><i></i></span><b>ACCESS TEST</b><small>AUTHORIZED LAB</small></div></div>
+            <div class="signal-beam" aria-hidden="true"><i></i><i></i><i></i><span class="signal-packet">AUTH</span></div>
+            <svg class="car-prop" viewBox="0 0 270 125" aria-hidden="true">
+              <path class="car-body" d="M22 79l18-5 26-42c5-8 13-12 24-12h84c11 0 19 4 25 12l28 40 21 7c8 3 12 9 12 18v8H18v-12c0-7 1-11 4-14z"/>
+              <path class="car-glass" d="M78 35h43v34H57l22-33zm56 0h41c8 0 12 3 17 10l16 24h-74V35z"/>
+              <circle class="wheel" cx="68" cy="102" r="19"/><circle class="wheel" cx="208" cy="102" r="19"/>
+              <path class="door-lock" d="M145 55v-8c0-10 16-10 16 0v8m-19 0h22v17h-22z"/>
+              <path class="light-beam" d="M229 73h28"/>
+            </svg>
+            <div class="car-state"><span class="state-locked">VEHICLE LOCKED</span><span class="state-open">ACCESS VALIDATED · UNLOCKED</span></div>
+          </div>
+          <dl><div><dt>OBSERVAR</dt><dd>Telemetría y exposición inalámbrica</dd></div><div><dt>VALIDAR</dt><dd>Segmentación y controles de acceso</dd></div><div><dt>LÍMITE</dt><dd>Nunca intervenir un vehículo en circulación</dd></div></dl>
+        </article>
+        <article class="domain-card network-live-card">
+          <div class="domain-head"><span>NET / 02</span><b>AUTORIZADO</b></div>
+          <h3>Auditoría de redes en movimiento</h3>
+          <p class="network-pitch">Una antena que camina con vos. El On7 convierte cada recorrido en un relevamiento RF continuo: mientras avanzás por las cuadras, escucha de forma pasiva las balizas públicas que anuncian los puntos de acceso y registra cómo cambia el paisaje inalámbrico alrededor.</p>
+          <p class="network-pitch secondary">De barrio en barrio, la caminata deja de ser un trayecto y se vuelve una radiografía viva de la ciudad: densidad de redes, canales superpuestos, variaciones de señal, zonas saturadas y puntos ciegos. Sin conectarse a las redes ni interrumpirlas.</p>
+          <div class="network-visual urban-survey" aria-label="Simulación animada de un relevamiento inalámbrico durante una caminata">
+            <svg viewBox="0 0 600 250" role="img" aria-label="Mapa urbano con una ruta caminada y señales Wi-Fi apareciendo">
+              <defs><linearGradient id="routeGlow" x1="0" x2="1"><stop stop-color="#18ffa7"/><stop offset="1" stop-color="#00c8ff"/></linearGradient></defs>
+              <g class="city-map" aria-hidden="true">
+                <path class="streets" d="M0 62H600M0 132H600M0 205H600M92 0V250M214 0V250M358 0V250M505 0V250"/>
+                <g class="blocks"><rect x="12" y="10" width="65" height="38"/><rect x="109" y="13" width="88" height="34"/><rect x="231" y="9" width="108" height="40"/><rect x="375" y="12" width="111" height="35"/><rect x="522" y="10" width="64" height="40"/><rect x="14" y="77" width="62" height="39"/><rect x="111" y="78" width="84" height="37"/><rect x="232" y="77" width="106" height="38"/><rect x="376" y="78" width="108" height="37"/><rect x="520" y="76" width="66" height="40"/><rect x="13" y="148" width="63" height="40"/><rect x="110" y="149" width="86" height="38"/><rect x="231" y="148" width="108" height="40"/><rect x="376" y="149" width="110" height="38"/><rect x="521" y="148" width="65" height="40"/></g>
+              </g>
+              <path class="walk-trail" d="M28 222 C80 190 72 145 126 132 S203 102 225 70 S310 47 340 88 S411 153 460 126 S526 78 576 38"/>
+              <g class="ap ap1" transform="translate(70 90)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap2" transform="translate(175 184)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap3" transform="translate(290 105)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap4" transform="translate(420 55)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap5" transform="translate(535 175)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="walker">
+                <circle class="walker-scan" r="24"/><circle class="walker-dot" r="7"/><path d="M0 9v10M0 12l-8 7M0 12l8 7"/>
+                <animateMotion dur="9s" repeatCount="indefinite" path="M28 222 C80 190 72 145 126 132 S203 102 225 70 S310 47 340 88 S411 153 460 126 S526 78 576 38"/>
+              </g>
+            </svg>
+            <div class="street-label label-a">BARRIO_01</div><div class="street-label label-b">BARRIO_02</div><div class="street-label label-c">BARRIO_03</div>
+            <div class="live-readout"><span><i></i>RELEVAMIENTO PASIVO</span><span>CAMINATA ACTIVA</span><span>APs +1</span><span>MAPA RF</span></div>
+          </div>
+          <p class="demo-caption">Visualización conceptual: los datos mostrados ilustran el flujo del relevamiento.</p>
+          <dl><div><dt>RECORRER</dt><dd>Convertir cada cuadra en una muestra de cobertura</dd></div><div><dt>COMPARAR</dt><dd>Ver cómo cambian canales y señal entre zonas</dd></div><div><dt>REVELAR</dt><dd>Detectar saturación, solapamientos y puntos ciegos</dd></div></dl>
+        </article>
+        <article class="domain-card pentest-live-card">
+          <div class="domain-head"><span>TEST / 03</span><b>CONTRATO</b></div>
+          <h3>Pentesting</h3>
+          <p>Una simulación acotada de ataque para comprobar si una debilidad puede producir un impacto real. Requiere reglas de compromiso, ventanas horarias, exclusiones, contactos de emergencia y un informe final.</p>
+          <div class="scene-panel terminal-scene" aria-label="Terminal animada que simula el hallazgo y contención de una vulnerabilidad">
+            <div class="terminal-bar"><i></i><i></i><i></i><span>authorized-assessment — lab</span></div>
+            <div class="terminal-body" aria-hidden="true">
+              <p><b>root@on7:~#</b> audit --scope LAB_TARGET</p>
+              <p class="term-line t1">[+] surface mapped <span>................ OK</span></p>
+              <p class="term-line t2">[+] controls checked <span>.............. 12</span></p>
+              <p class="term-line t3">[!] weakness validated <span>......... FOUND</span></p>
+              <p class="term-line t4">[*] impact simulation <span>......... RUNNING</span></p>
+              <p class="term-line t5">[✓] session contained <span>.......... CLOSED</span></p>
+              <div class="term-progress"><i></i></div>
+            </div>
+            <div class="breach-pulse" aria-hidden="true"><span>!</span></div>
+          </div>
+          <dl><div><dt>PREPARAR</dt><dd>Alcance y autorización escrita</dd></div><div><dt>PROBAR</dt><dd>Hipótesis con mínimo impacto</dd></div><div><dt>CERRAR</dt><dd>Limpiar, documentar y corregir</dd></div></dl>
+        </article>
+        <article class="domain-card bluetooth-live-card">
+          <div class="domain-head"><span>BT / 04</span><b>DISPOSITIVO PROPIO</b></div>
+          <h3>Bluetooth security</h3>
+          <p>Evaluación de emparejamiento, perfiles, servicios y resiliencia sobre accesorios controlados. Los exploits Bluetooth aprovechan fallas concretas de implementación; se estudian en laboratorio para confirmar versiones afectadas y aplicar mitigaciones.</p>
+          <div class="scene-panel bluetooth-scene" aria-label="Radar Bluetooth animado evaluando dispositivos y perfiles cercanos">
+            <div class="bt-radar" aria-hidden="true"><i></i><i></i><i></i><span class="bt-mark">ᛒ</span><span class="radar-sweep"></span></div>
+            <div class="bt-device dev-headset"><i>◉</i><span>AUDIO</span><b>A2DP</b></div>
+            <div class="bt-device dev-watch"><i>⌚</i><span>WEARABLE</span><b>BLE</b></div>
+            <div class="bt-device dev-sensor"><i>◆</i><span>SENSOR</span><b>GATT</b></div>
+            <svg class="bt-links" viewBox="0 0 600 230" aria-hidden="true"><path d="M300 115L110 54M300 115L486 48M300 115L498 181"/></svg>
+            <div class="handshake-chip"><span></span>PROFILE CHECK <b>PASS</b></div>
+          </div>
+          <dl><div><dt>DESCUBRIR</dt><dd>Perfiles y servicios anunciados</dd></div><div><dt>COMPROBAR</dt><dd>Versiones, parches y aislamiento</dd></div><div><dt>DEFENDER</dt><dd>Actualizar, desvincular y reducir exposición</dd></div></dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="hardware" id="hardware">
+      <div class="hardware-visual">
+        <div class="core-ring"><span>ON7</span><small>FIELD NODE</small></div>
+        <span class="node n1">MONITOR MODE</span><span class="node n2">BT 5.1</span><span class="node n3">HID</span><span class="node n4">USB HOST</span>
+      </div>
+      <div class="hardware-copy">
+        <p class="section-index">03 / LA MÁQUINA</p>
+        <h2>Viejo teléfono.<br>Nuevo propósito.</h2>
+        <p>El proyecto extendió un kernel Android 3.18 para convertir al On7 en un nodo portátil de laboratorio. No es magia: es compatibilidad, drivers, energía estable y muchas capas trabajando juntas.</p>
+        <div class="spec-grid">
+          <div><span>01</span><h3>Kernel custom</h3><p>Soporte USB, HID y radios externas.</p></div>
+          <div><span>02</span><h3>RTL8761BU</h3><p>Bluetooth 5.1 mediante backport del driver.</p></div>
+          <div><span>03</span><h3>Kali userspace</h3><p>Herramientas de análisis dentro del chroot.</p></div>
+          <div><span>04</span><h3>OTG alimentado</h3><p>Periféricos estables sin exigir al teléfono.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision" id="limite">
+      <p class="section-index">04 / ANTES DE TOCAR LA RED</p>
+      <h2>La prueba de los cuatro “sí”.</h2>
+      <div class="decision-grid">
+        <article><span>01</span><h3>¿Es mío?</h3><p>El equipo, la cuenta y la red están bajo tu control.</p></article>
+        <article><span>02</span><h3>¿Hay permiso?</h3><p>La autorización es explícita, vigente y demostrable.</p></article>
+        <article><span>03</span><h3>¿Hay alcance?</h3><p>Sabés exactamente qué, cuándo y hasta dónde probar.</p></article>
+        <article><span>04</span><h3>¿Es reversible?</h3><p>Podés detener la prueba y restaurar el servicio sin daño.</p></article>
+      </div>
+      <div class="final-rule"><span>SI ALGUNA RESPUESTA ES “NO”</span><strong>No ejecutes la prueba.</strong></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ON7 // NETHUNTER FIELD MANUAL</p>
+    <p>Contenido educativo · Sin procedimientos ofensivos operativos</p>
+    <a href="#inicio">VOLVER ARRIBA ↑</a>
+  </footer>
+
+</body>
+</html>
