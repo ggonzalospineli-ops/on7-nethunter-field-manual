@@ -117,31 +117,32 @@
         </article>
         <article class="domain-card network-live-card">
           <div class="domain-head"><span>NET / 02</span><b>AUTORIZADO</b></div>
-          <h3>Auditoría de redes</h3>
-          <p>Inventario, observación y evaluación de una infraestructura propia o contratada. El objetivo es encontrar configuraciones débiles, activos inesperados y señales de exposición antes de que lo haga un tercero.</p>
-          <div class="network-visual" aria-label="Visualización animada de una red en tiempo real">
-            <div class="network-grid" aria-hidden="true"></div>
-            <div class="scan-wave" aria-hidden="true"></div>
-            <svg viewBox="0 0 600 230" role="img" aria-label="Topología de red con tráfico entre nodos">
-              <g class="net-links">
-                <path d="M300 112 L102 52 M300 112 L90 174 M300 112 L488 42 M300 112 L516 172 M102 52 L90 174 M488 42 L516 172"/>
+          <h3>Auditoría de redes en movimiento</h3>
+          <p class="network-pitch">Una antena que camina con vos. El On7 convierte cada recorrido en un relevamiento RF continuo: mientras avanzás por las cuadras, escucha de forma pasiva las balizas públicas que anuncian los puntos de acceso y registra cómo cambia el paisaje inalámbrico alrededor.</p>
+          <p class="network-pitch secondary">De barrio en barrio, la caminata deja de ser un trayecto y se vuelve una radiografía viva de la ciudad: densidad de redes, canales superpuestos, variaciones de señal, zonas saturadas y puntos ciegos. Sin conectarse a las redes ni interrumpirlas.</p>
+          <div class="network-visual urban-survey" aria-label="Simulación animada de un relevamiento inalámbrico durante una caminata">
+            <svg viewBox="0 0 600 250" role="img" aria-label="Mapa urbano con una ruta caminada y señales Wi-Fi apareciendo">
+              <defs><linearGradient id="routeGlow" x1="0" x2="1"><stop stop-color="#18ffa7"/><stop offset="1" stop-color="#00c8ff"/></linearGradient></defs>
+              <g class="city-map" aria-hidden="true">
+                <path class="streets" d="M0 62H600M0 132H600M0 205H600M92 0V250M214 0V250M358 0V250M505 0V250"/>
+                <g class="blocks"><rect x="12" y="10" width="65" height="38"/><rect x="109" y="13" width="88" height="34"/><rect x="231" y="9" width="108" height="40"/><rect x="375" y="12" width="111" height="35"/><rect x="522" y="10" width="64" height="40"/><rect x="14" y="77" width="62" height="39"/><rect x="111" y="78" width="84" height="37"/><rect x="232" y="77" width="106" height="38"/><rect x="376" y="78" width="108" height="37"/><rect x="520" y="76" width="66" height="40"/><rect x="13" y="148" width="63" height="40"/><rect x="110" y="149" width="86" height="38"/><rect x="231" y="148" width="108" height="40"/><rect x="376" y="149" width="110" height="38"/><rect x="521" y="148" width="65" height="40"/></g>
               </g>
-              <g class="net-packets" aria-hidden="true">
-                <circle r="5"><animateMotion dur="2.4s" repeatCount="indefinite" path="M300 112 L102 52"/></circle>
-                <circle r="4"><animateMotion dur="3.1s" begin="-.8s" repeatCount="indefinite" path="M90 174 L300 112 L488 42"/></circle>
-                <circle r="5"><animateMotion dur="2.8s" begin="-1.6s" repeatCount="indefinite" path="M516 172 L300 112"/></circle>
-              </g>
-              <g class="net-nodes">
-                <g transform="translate(300 112)" class="node-core"><circle r="31"/><circle r="18"/><text y="4">GW</text></g>
-                <g transform="translate(102 52)"><circle r="17"/><text x="25" y="4">AP-01</text></g>
-                <g transform="translate(90 174)"><circle r="13"/><text x="22" y="4">NAS</text></g>
-                <g transform="translate(488 42)"><circle r="15"/><text x="-72" y="4">PHONE</text></g>
-                <g transform="translate(516 172)"><circle r="18"/><text x="-82" y="4">LAPTOP</text></g>
+              <path class="walk-trail" d="M28 222 C80 190 72 145 126 132 S203 102 225 70 S310 47 340 88 S411 153 460 126 S526 78 576 38"/>
+              <g class="ap ap1" transform="translate(70 90)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap2" transform="translate(175 184)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap3" transform="translate(290 105)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap4" transform="translate(420 55)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="ap ap5" transform="translate(535 175)"><circle class="ap-wave" r="14"/><circle r="5"/><text x="12" y="4">AP</text></g>
+              <g class="walker">
+                <circle class="walker-scan" r="24"/><circle class="walker-dot" r="7"/><path d="M0 9v10M0 12l-8 7M0 12l8 7"/>
+                <animateMotion dur="9s" repeatCount="indefinite" path="M28 222 C80 190 72 145 126 132 S203 102 225 70 S310 47 340 88 S411 153 460 126 S526 78 576 38"/>
               </g>
             </svg>
-            <div class="live-readout"><span><i></i>LIVE SCAN</span><span>12 NODOS</span><span>2.4 MB/s</span><span>98% CIFRADO</span></div>
+            <div class="street-label label-a">BARRIO_01</div><div class="street-label label-b">BARRIO_02</div><div class="street-label label-c">BARRIO_03</div>
+            <div class="live-readout"><span><i></i>RELEVAMIENTO PASIVO</span><span>CAMINATA ACTIVA</span><span>APs +1</span><span>MAPA RF</span></div>
           </div>
-          <dl><div><dt>MAPEAR</dt><dd>Equipos y servicios permitidos</dd></div><div><dt>MEDIR</dt><dd>Cobertura, cifrado y segmentación</dd></div><div><dt>ENTREGAR</dt><dd>Evidencia, impacto y remediación</dd></div></dl>
+          <p class="demo-caption">Visualización conceptual: los datos mostrados ilustran el flujo del relevamiento.</p>
+          <dl><div><dt>RECORRER</dt><dd>Convertir cada cuadra en una muestra de cobertura</dd></div><div><dt>COMPARAR</dt><dd>Ver cómo cambian canales y señal entre zonas</dd></div><div><dt>REVELAR</dt><dd>Detectar saturación, solapamientos y puntos ciegos</dd></div></dl>
         </article>
         <article class="domain-card">
           <div class="domain-head"><span>TEST / 03</span><b>CONTRATO</b></div>
