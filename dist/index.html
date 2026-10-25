@@ -109,10 +109,22 @@
         <p>Capacidades reales del equipo, explicadas desde la evaluación responsable. El mismo hardware puede servir para descubrir fallas o para causar daño: el alcance autorizado define la diferencia.</p>
       </div>
       <div class="domain-grid">
-        <article class="domain-card">
+        <article class="domain-card car-live-card">
           <div class="domain-head"><span>AUTO / 01</span><b>LAB CERRADO</b></div>
           <h3>Car hacking</h3>
           <p>Investigación de seguridad automotriz sobre bancos de prueba, ECUs propias o vehículos expresamente autorizados. Permite estudiar superficies como Bluetooth, Wi-Fi, infotainment y buses internos sin poner personas ni tránsito en riesgo.</p>
+          <div class="scene-panel car-scene" aria-label="Simulación visual de un teléfono validando el desbloqueo de un automóvil de laboratorio">
+            <div class="phone-prop" aria-hidden="true"><span class="phone-speaker"></span><div class="phone-screen"><span class="lock-icon"><i></i></span><b>ACCESS TEST</b><small>AUTHORIZED LAB</small></div></div>
+            <div class="signal-beam" aria-hidden="true"><i></i><i></i><i></i><span class="signal-packet">AUTH</span></div>
+            <svg class="car-prop" viewBox="0 0 270 125" aria-hidden="true">
+              <path class="car-body" d="M22 79l18-5 26-42c5-8 13-12 24-12h84c11 0 19 4 25 12l28 40 21 7c8 3 12 9 12 18v8H18v-12c0-7 1-11 4-14z"/>
+              <path class="car-glass" d="M78 35h43v34H57l22-33zm56 0h41c8 0 12 3 17 10l16 24h-74V35z"/>
+              <circle class="wheel" cx="68" cy="102" r="19"/><circle class="wheel" cx="208" cy="102" r="19"/>
+              <path class="door-lock" d="M145 55v-8c0-10 16-10 16 0v8m-19 0h22v17h-22z"/>
+              <path class="light-beam" d="M229 73h28"/>
+            </svg>
+            <div class="car-state"><span class="state-locked">VEHICLE LOCKED</span><span class="state-open">ACCESS VALIDATED · UNLOCKED</span></div>
+          </div>
           <dl><div><dt>OBSERVAR</dt><dd>Telemetría y exposición inalámbrica</dd></div><div><dt>VALIDAR</dt><dd>Segmentación y controles de acceso</dd></div><div><dt>LÍMITE</dt><dd>Nunca intervenir un vehículo en circulación</dd></div></dl>
         </article>
         <article class="domain-card network-live-card">
@@ -144,16 +156,37 @@
           <p class="demo-caption">Visualización conceptual: los datos mostrados ilustran el flujo del relevamiento.</p>
           <dl><div><dt>RECORRER</dt><dd>Convertir cada cuadra en una muestra de cobertura</dd></div><div><dt>COMPARAR</dt><dd>Ver cómo cambian canales y señal entre zonas</dd></div><div><dt>REVELAR</dt><dd>Detectar saturación, solapamientos y puntos ciegos</dd></div></dl>
         </article>
-        <article class="domain-card">
+        <article class="domain-card pentest-live-card">
           <div class="domain-head"><span>TEST / 03</span><b>CONTRATO</b></div>
           <h3>Pentesting</h3>
           <p>Una simulación acotada de ataque para comprobar si una debilidad puede producir un impacto real. Requiere reglas de compromiso, ventanas horarias, exclusiones, contactos de emergencia y un informe final.</p>
+          <div class="scene-panel terminal-scene" aria-label="Terminal animada que simula el hallazgo y contención de una vulnerabilidad">
+            <div class="terminal-bar"><i></i><i></i><i></i><span>authorized-assessment — lab</span></div>
+            <div class="terminal-body" aria-hidden="true">
+              <p><b>root@on7:~#</b> audit --scope LAB_TARGET</p>
+              <p class="term-line t1">[+] surface mapped <span>................ OK</span></p>
+              <p class="term-line t2">[+] controls checked <span>.............. 12</span></p>
+              <p class="term-line t3">[!] weakness validated <span>......... FOUND</span></p>
+              <p class="term-line t4">[*] impact simulation <span>......... RUNNING</span></p>
+              <p class="term-line t5">[✓] session contained <span>.......... CLOSED</span></p>
+              <div class="term-progress"><i></i></div>
+            </div>
+            <div class="breach-pulse" aria-hidden="true"><span>!</span></div>
+          </div>
           <dl><div><dt>PREPARAR</dt><dd>Alcance y autorización escrita</dd></div><div><dt>PROBAR</dt><dd>Hipótesis con mínimo impacto</dd></div><div><dt>CERRAR</dt><dd>Limpiar, documentar y corregir</dd></div></dl>
         </article>
-        <article class="domain-card">
+        <article class="domain-card bluetooth-live-card">
           <div class="domain-head"><span>BT / 04</span><b>DISPOSITIVO PROPIO</b></div>
           <h3>Bluetooth security</h3>
           <p>Evaluación de emparejamiento, perfiles, servicios y resiliencia sobre accesorios controlados. Los exploits Bluetooth aprovechan fallas concretas de implementación; se estudian en laboratorio para confirmar versiones afectadas y aplicar mitigaciones.</p>
+          <div class="scene-panel bluetooth-scene" aria-label="Radar Bluetooth animado evaluando dispositivos y perfiles cercanos">
+            <div class="bt-radar" aria-hidden="true"><i></i><i></i><i></i><span class="bt-mark">ᛒ</span><span class="radar-sweep"></span></div>
+            <div class="bt-device dev-headset"><i>◉</i><span>AUDIO</span><b>A2DP</b></div>
+            <div class="bt-device dev-watch"><i>⌚</i><span>WEARABLE</span><b>BLE</b></div>
+            <div class="bt-device dev-sensor"><i>◆</i><span>SENSOR</span><b>GATT</b></div>
+            <svg class="bt-links" viewBox="0 0 600 230" aria-hidden="true"><path d="M300 115L110 54M300 115L486 48M300 115L498 181"/></svg>
+            <div class="handshake-chip"><span></span>PROFILE CHECK <b>PASS</b></div>
+          </div>
           <dl><div><dt>DESCUBRIR</dt><dd>Perfiles y servicios anunciados</dd></div><div><dt>COMPROBAR</dt><dd>Versiones, parches y aislamiento</dd></div><div><dt>DEFENDER</dt><dd>Actualizar, desvincular y reducir exposición</dd></div></dl>
         </article>
       </div>
